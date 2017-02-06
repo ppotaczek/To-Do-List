@@ -1,0 +1,116 @@
+* {
+  font-family: 'Indie Flower', cursive;
+}
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-color: white;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 10px;
+  color: brown;
+}
+#taskInput, #priority{
+  display: inline-block;
+  height: 25px;
+  font-size: 16px;
+}
+#addTaskButton {
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: brown;
+  border-radius: 10px;
+  background-color: white;
+}
+#taskInput {
+  width: 240px;
+}
+#priority{
+  width: 90px;
+}
+#tip, #tip2 {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: red;
+  position: absolute;
+  display: block;
+  width: 240px;
+  top: 125px;
+  left: 290px;
+}
+#tip {
+  left: 10px;
+}
+.taskLine *{
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+.complete {
+  color: red;
+  font-weight: bold;
+}
+.container {
+  margin: 10px;
+}
+.right {
+  float: right;
+  position: relative;
+  border-radius: 20px;
+  margin: 50px 100px 0 0;
+  width: 500px;
+  border: 2px solid grey;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.left {
+  font-weight: normal;
+  margin: 300px 0 0 50px;
+  float: left;
+  font-size: 90px;
+  width: 800px;
+  text-align: center;
+  color: brown;
+}
+.tasks {
+  float: left;
+  display: block;
+  width: 320px;
+  margin: 0 0 12px -30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  border-bottom: 1px solid grey;
+}
+.row::after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+.center {
+  text-align: center;
+}
+#taskList {
+  list-style: none;
+}
+#leftTasks {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0px;
+  font-weight: bold;
+}
+#removeFinishedTasksButton {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: brown;
+  font-weight: bold;
+}
+.buttons {
+  float: right;
+  font-weight: bold;
+  color: brown;
+}
