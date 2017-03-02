@@ -3,12 +3,13 @@
 }
 body {
   background-image: url("../images/background.jpg");
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
   background-color: white;
 }
 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 2em;
   margin: 10px;
   color: brown;
 }
@@ -56,18 +57,23 @@ h1 {
   margin: 10px;
 }
 .right {
-  float: right;
-  position: relative;
+  font-size: 20px;
+  right: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 20px;
-  margin: 50px 100px 0 0;
-  width: 500px;
+  width: 510px;
   border: 2px solid grey;
   background-color: rgba(255, 255, 255, 0.3);
 }
 .left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  margin: 0;
   font-weight: normal;
-  margin: 300px 0 0 50px;
-  float: left;
   font-size: 90px;
   width: 800px;
   text-align: center;
@@ -76,6 +82,7 @@ h1 {
 .tasks {
   float: left;
   display: block;
+  overflow-wrap: break-word;
   width: 320px;
   margin: 0 0 12px -30px;
   font-weight: bold;
@@ -113,4 +120,41 @@ h1 {
   float: right;
   font-weight: bold;
   color: brown;
+}
+
+@media screen and (max-width: 1550px) {
+  .left {
+    left: 0;
+    margin: 0 auto;
+    position: static;
+    transform: translate(0, 0);
+  }
+  .right {
+    position: static;
+    margin: 0 auto;
+    margin-top: 50px;
+    transform: translate(0, 0);
+  }
+}
+@media screen and (max-width: 680px) {
+  body {
+    background-size: auto 400vh;
+  }
+  #mainContainer {
+    text-align: center;
+    position: relative;
+    margin: 0;
+    width: 800px;
+    text-align: center;
+  }
+  .left {
+    margin: 0;
+  }
+  .right {
+    margin: 0 auto;
+    margin-top: 200px;
+    -ms-transform: scale(1.5, 1.5); /* IE 9 */
+    -webkit-transform: scale(1.5, 1.5); /* Safari */
+    transform: scale(1.5, 1.5);
+  }
 }
